@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import GithubProjects from './components/GithubProjects/GithubProjects';
+import GithubProjects from './components/GithubProjects/GithubProjects.jsx';
 
 const githubOwner = 'BryanDGuy'
 

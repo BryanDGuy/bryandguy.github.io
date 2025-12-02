@@ -1,18 +1,8 @@
 import React from 'react';
 import styles from './GithubProjects.module.scss';
 
-interface Repo {
-  name: string;
-  description: string | null;
-  html_url: string;
-  language: string | null;
-  stargazers_count: number;
-  forks_count: number;
-  updated_at: string;
-}
-
-const GithubProjects: React.FC<{repos: Repo[]}> = ({ repos }) => {
-  const formatDate = (dateString: string) => {
+const GithubProjects = ({ repos }) => {
+  const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -23,9 +13,9 @@ const GithubProjects: React.FC<{repos: Repo[]}> = ({ repos }) => {
   return (
     <div className={styles.projectsGrid}>
       {repos.map(repo => (
-        <a 
-          key={repo.name} 
-          className={styles.projectCard} 
+        <a
+          key={repo.name}
+          className={styles.projectCard}
           href={repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
@@ -41,11 +31,11 @@ const GithubProjects: React.FC<{repos: Repo[]}> = ({ repos }) => {
               </span>
             </div>
           </div>
-          
+
           <p className={styles.projectDescription}>
             {repo.description || 'No description available'}
           </p>
-          
+
           <div className={styles.cardFooter}>
             <div className={styles.projectMeta}>
               {repo.language && (
