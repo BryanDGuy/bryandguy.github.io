@@ -162,10 +162,6 @@ function App() {
                 <span className="contact-icon">📱</span>
                 GitHub
               </a>
-              <a href="mailto:doughertybryan@gmail.com" className="contact-link">
-                <span className="contact-icon">✉️</span>
-                Email
-              </a>
               <a href="https://www.linkedin.com/in/bryan-dougherty-2b5782141/" className="contact-link" target="_blank" rel="noopener noreferrer">
                 <span className="contact-icon">💼</span>
                 LinkedIn
